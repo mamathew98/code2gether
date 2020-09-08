@@ -5,7 +5,6 @@
 <input onchange="changeName()" id="pName" type="text" placeholder="Project Name">
 
 <a id="pCreate" class="btn btn-primary">Create New Project</a>
-{{/if}}
 
 <div id="userProjects" style="
     margin: 20px;
@@ -23,6 +22,9 @@
         {{/each}}
     </ul>
 </div>
+{{/if}}
+
+
 
 
 <script>
@@ -33,9 +35,9 @@
         pList[i].setAttribute("href", url);
     };
     function changeName() {
-            var pName = document.getElementById("pName").value;
-    var pCreate = document.getElementById("pCreate");
-    var createUrl = "/createProject/"+pName
-    pCreate.setAttribute("href", createUrl );
+        var pName = document.getElementById("pName").value;
+        var pCreate = document.getElementById("pCreate");
+        var createUrl = "/createProject/" + pName
+        pCreate.setAttribute("href", createUrl);
     }
 </script>
