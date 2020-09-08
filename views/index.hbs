@@ -1,8 +1,9 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
 
-<input onchange="changeName()" id="pName" type="text" placeholder="Project Name">
 {{#if user}}
+<input onchange="changeName()" id="pName" type="text" placeholder="Project Name">
+
 <a id="pCreate" class="btn btn-primary">Create New Project</a>
 {{/if}}
 
