@@ -1,0 +1,40 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+
+<input onchange="changeName()" id="pName" type="text" placeholder="Project Name">
+{{#if user}}
+<a id="pCreate" class="btn btn-primary">Create New Project</a>
+{{/if}}
+
+<div id="userProjects" style="
+    margin: 20px;
+    padding : 10px;
+    border: solid 1px black;
+">
+    User Projects:
+
+    <ul style="padding: 10px;">
+        {{#each projects}}
+        <li style="padding: 10px;">
+            <span>{{this.name}} : </span>
+            <a>{{this._id}}</a>
+        </li>
+        {{/each}}
+    </ul>
+</div>
+
+
+<script>
+    var pList = document.getElementById("userProjects").querySelectorAll("a");
+    var i;
+    for (i = 0; i < pList.length; i++) {
+        url = "/project/" + pList[i].innerHTML;
+        pList[i].setAttribute("href", url);
+    };
+    function changeName() {
+            var pName = document.getElementById("pName").value;
+    var pCreate = document.getElementById("pCreate");
+    var createUrl = "/createProject/"+pName
+    pCreate.setAttribute("href", createUrl );
+    }
+</script>

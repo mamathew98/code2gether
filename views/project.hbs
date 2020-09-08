@@ -1,0 +1,95 @@
+<div>
+    <span style="
+        position: absolute;
+        top: 60px;
+        right: 50px;
+        font-size: 20px;
+        color: #353a40;
+        font-weight: bold;
+        border: solid 1px #353a40;
+        padding: 5px;
+    ">Project: {{pName}}</span>
+    <div class="row">
+
+        <div class="col-md-5" style="max-height: 80vh;">
+            <textarea id="code-screen"></textarea>
+            </br>
+
+            <textarea id="code-screen-css"></textarea>
+            </br>
+
+            <textarea id="code-screen-js"></textarea>
+
+        </div>
+        <div class="col-md-7">
+            <div class="output">
+                <iframe id="compiler"></iframe>
+            </div>
+        </div>
+        <div class="sideBar">
+            <div id="chatbox">
+                <span class="sideBar-btn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9783;</span>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="card text-white bg-dark mb-3" style="margin: 3px 10px;padding: 10px">
+                Share This Url With Others to Collaborate:
+                <span class="p-url" id="pUrl"></span>
+            </div>
+            <div class="card text-white bg-dark mb-3" style="margin: 10px;position: absolute;width: 95%;bottom: 0;">
+                {{!-- CHAT --}}
+                <div class="card-body">
+                    <div class="card-title" style="padding: 10px;">
+                        CHAT ROOM
+                        <span class="float-right" id="chatbox-username">
+                            {{#if user}}
+                            {{user.name}}
+                            {{/if}}
+                        </span>
+                    </div>
+                    <ul class="media-list" style=" max-height: 150px;; overflow-y: scroll; padding: 5px !important;"
+                        id="chatbox-listMessages">
+
+                    </ul>
+                </div>
+                <div class="card-footer" style="padding: 10px;">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Enter message" id="userMessage"
+                            style="margin: 5px;" />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-primary" onclick="sendMessage()"
+                                style="margin: 5px;">SEND</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<input type="hidden" value="{{roomId}}" id="roomId" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/mode/javascript/javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/mode/xml/xml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/mode/htmlmixed/htmlmixed.min.js"></script>
+
+<script src="/plugins/ot/ot.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/javascripts/editor.js"></script>
+
+
+<script>
+    pUrl = document.getElementById("pUrl");
+    pUrl.innerHTML = window.location.href;
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "400px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
