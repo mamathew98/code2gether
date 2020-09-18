@@ -2,7 +2,7 @@ var EditorClient = ot.EditorClient;
 var SocketIOAdapter = ot.SocketIOAdapter;
 var CodeMirrorAdapter = ot.CodeMirrorAdapter;
 
-locavar socket = io("http://51.195.28.68:3000");
+var socket = io("http://51.195.28.68:3000");
 var socketCss = io("http://51.195.28.68:3000", {
   forceNew: true,
 });
@@ -67,11 +67,10 @@ function compile() {
   var html = htmlVal;
   var css = cssVal;
   var js = jsVal;
-  var compiler = document.getElementsByTagName("iframe")[0].contentWindow
-    .document;
+  var compiler = document.getElementsByTagName("iframe")[0];
 
-  compiler.open();
-  compiler.srcdoc = `
+  // compiler.open();
+  const source = `
   <html>
     <head><style>${css}</style></head>
     <body>
@@ -80,7 +79,11 @@ function compile() {
     </body>
   </html>
 `;
-  compiler.close();
+  // compiler.writeln(
+  //   html + "<style>" + css + "</style>" + "<script>" + js + "</script>"
+  // );
+  compiler.srcdoc = source;
+  // compiler.close();
 }
 
 var code = $("#code-screen").val();
