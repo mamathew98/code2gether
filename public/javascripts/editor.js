@@ -2,12 +2,12 @@ var EditorClient = ot.EditorClient;
 var SocketIOAdapter = ot.SocketIOAdapter;
 var CodeMirrorAdapter = ot.CodeMirrorAdapter;
 
-var socket = io('http://51.195.28.68:3000');
-var socketCss = io('http://51.195.28.68:3000', {
-  forceNew: true
+locavar socket = io("http://51.195.28.68:3000");
+var socketCss = io("http://51.195.28.68:3000", {
+  forceNew: true,
 });
-var socketJs = io('http://51.195.28.68:3000', {
-  forceNew: true
+var socketJs = io("http://51.195.28.68:3000", {
+  forceNew: true,
 });
 
 // var socket = io("http://localhost:3000");
@@ -25,7 +25,7 @@ var editor = CodeMirror.fromTextArea(document.getElementById("code-screen"), {
   lineNumbers: true,
   theme: "monokai",
   mode: "htmlmixed",
-  extraKeys: {"Ctrl-Space": "autocomplete"},
+  extraKeys: { "Ctrl-Space": "autocomplete" },
 });
 editor.setSize(400, 190);
 editor.on("change", function (cm, change) {
@@ -33,15 +33,13 @@ editor.on("change", function (cm, change) {
   compile();
 });
 
-
 var editorCss = CodeMirror.fromTextArea(
   document.getElementById("code-screen-css"),
   {
     lineNumbers: true,
     theme: "monokai",
     mode: "css",
-    extraKeys: {"Ctrl-Space": "autocomplete"},
-
+    extraKeys: { "Ctrl-Space": "autocomplete" },
   }
 );
 editorCss.setSize(400, 190);
@@ -56,8 +54,7 @@ var editorJs = CodeMirror.fromTextArea(
     lineNumbers: true,
     theme: "monokai",
     mode: "javascript",
-    extraKeys: {"Ctrl-Space": "autocomplete"},
-
+    extraKeys: { "Ctrl-Space": "autocomplete" },
   }
 );
 editorJs.setSize(400, 190);
@@ -74,9 +71,15 @@ function compile() {
     .document;
 
   compiler.open();
-  compiler.writeln(
-    html + "<style>" + css + "</style>" + "<script>" + js + "</script>"
-  );
+  compiler.srcdoc = `
+  <html>
+    <head><style>${css}</style></head>
+    <body>
+      ${html}
+      <script>${js}</script>
+    </body>
+  </html>
+`;
   compiler.close();
 }
 
@@ -140,7 +143,7 @@ socketJs.on("doc", function (obj) {
 });
 
 var username = $("#chatbox-username").text();
-console.log('user: ', username)
+console.log("user: ", username);
 if (username === "") {
   var userId = Math.floor(Math.random() * 9999).toString();
   username = "User" + userId;
@@ -171,14 +174,14 @@ var userMessage = function (name, text) {
   return (
     '<li class="media" style="width: 100%;"> <div class="media-body" style="width: 100%;"> <div class="media" style="width: 100%;">' +
     '<div class="media-body" style="width: 100%;">' +
-    '<span style="color: green">'+
-    '<b>' +
+    '<span style="color: green">' +
+    "<b>" +
     name +
     "</b> : " +
-    '</span>'+
-    '<span style="color: white;">'+
+    "</span>" +
+    '<span style="color: white;">' +
     text +
-    '</span>'+
+    "</span>" +
     "</div></div></div></li>"
   );
 };
