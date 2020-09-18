@@ -14,22 +14,22 @@ router.get("/", function (req, res, next) {
     var userProjects;
     Project.find({owner: user._id} , function(err, projects) {
       userProjects = projects;
-      res.render("index", { title: "Code2Gether: A Platform For Coding Together", projects: userProjects });
+      res.render("index", { title: "Code2Gether", projects: userProjects });
     });
   }else {
-    res.render("index", { title: "Code2Gether: A Platform For Coding Together", projects: userProjects });
+    res.render("index", { title: "Code2Gether", projects: userProjects });
   }
 });
 
 router.get("/about", function (req, res, next) {
-  res.render("about", { title: "Code2Gether: A Platform For Coding Together" });
+  res.render("about", { title: "Code2Gether" });
 });
 
 router
   .route("/contact")
   .get(function (req, res, next) {
     res.render("contact", {
-      title: "Code2Gether: A Platform For Coding Together",
+      title: "Code2Gether",
     });
   })
   .post(
@@ -46,7 +46,7 @@ router
 
       if (!errors.isEmpty()) {
         res.render("contact", {
-          title: "Code2Gether: A Platform For Coding Together",
+          title: "Code2Gether",
           name: req.body.name,
           email: req.body.email,
           message: req.body.message,
@@ -65,7 +65,7 @@ router
             return console.log(err);
           }
           res.render("thank", {
-            title: "Code2Gether: A Platform For Coding Together",
+            title: "Code2Gether",
           });
         });
       }

@@ -3,18 +3,28 @@
 
 <head>
   <title>{{title}}</title>
+  <link rel="icon" href="/images/icon.png">
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/codemirror.min.css"
     integrity="sha512-/BlxZbYLtYGExexketXsTi47eHp+r2kTeq2OHecQPZlfbc7WFXVrwbVW9HOYjI6c9Ti+P60ASmVLxittZ0EBGw=="
     crossorigin="anonymous" />
-    
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/theme/monokai.min.css"
     integrity="sha512-R6PH4vSzF2Yxjdvb2p2FA06yWul+U0PDDav4b/od/oXf9Iw37zl10plvwOXelrjV2Ai7Eo3vyHeyFUjhXdBCVQ=="
     crossorigin="anonymous" />
 
   <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/addon/hint/show-hint.min.css">
+  </link>
+
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Quantico:ital@1&display=swap" rel="stylesheet">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/addon/hint/show-hint.min.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -31,8 +41,8 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="/">Code2Gether</a>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top" style="height: 50px !important;">
+    <a class="navbar-brand" href="/"><img src="/images/icon.png" style="height: 40px;"> Code2Gether</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
       aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

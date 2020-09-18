@@ -1,27 +1,51 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<h1 style="font-family: 'Monoton', cursive;
+    font-size: 5vw;
+    text-align: center;
+    padding-top: 20px;">{{title}}</h1>
+<p style="text-align: center;
+    font-family: 'Quantico', sans-serif;
+    font-size: 2vw;">Welcome to {{title}}</p>
+<p style="text-align: center;
+    font-family: 'Quantico', sans-serif;
+    font-size: 2vw;">A Platform for Developing Web Together</p>
+
+
 
 {{#if user}}
-<input onchange="changeName()" id="pName" type="text" placeholder="Project Name">
+<div class="row" style="margin-top: 50px;">
+    <div class="col-md-6 c2g-card" style="height: 300px;">
+        <input onchange="changeName()" id="pName" type="text" placeholder="Project Name" style="width: 100%;"
+            class="form-control">
+        <a id="pCreate" class="btn btn-primary" style="margin-top: 10px; margin-bottom: 15px;">Create New Project</a>
+        <p style="color: dimgrey;">Select a Name for Your Project, You can Access Your Project By this Name Later on
+            This Page</p>
+    </div>
 
-<a id="pCreate" class="btn btn-primary">Create New Project</a>
 
-<div id="userProjects" style="
-    margin: 20px;
-    padding : 10px;
-    border: solid 1px black;
-">
-    User Projects:
-
-    <ul style="padding: 10px;">
-        {{#each projects}}
-        <li style="padding: 10px;">
-            <span>{{this.name}} : </span>
-            <a>{{this._id}}</a>
-        </li>
-        {{/each}}
-    </ul>
+    <div class="col-md-6">
+        <div id="userProjects" class="c2g-card" style="height: 300px;">
+            <span> Your Projects:</span>
+            <div class="" style="overflow-y:scroll; height: 95%;margin-top: 10px;">
+                <ul class="list-group">
+                    {{#each projects}}
+                    <li class="list-group-item" style="padding: 10px; background-color: #2f2f2f;">
+                        <span>Name: {{this.name}}</span>
+                        <br>
+                        <span>Url: <a>{{this._id}}</a></span>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
+
+{{else}}
+<div style="width: 100%; text-align: center;">
+    <img src="/images/icon.png" style="height: 300px;padding: 15px; ">
+
+</div>
+
 {{/if}}
 
 

@@ -1,17 +1,7 @@
 <div>
-    <span style="
-        position: absolute;
-        top: 60px;
-        right: 50px;
-        font-size: 20px;
-        color: #353a40;
-        font-weight: bold;
-        border: solid 1px #353a40;
-        padding: 5px;
-    ">Project: {{pName}}</span>
     <div class="row">
 
-        <div class="col-md-5" style="max-height: 80vh;">
+        <div class="col-lg-4 col-md-12" style="">
             <textarea id="code-screen"></textarea>
             </br>
 
@@ -21,34 +11,29 @@
             <textarea id="code-screen-js"></textarea>
 
         </div>
-        <div class="col-md-7">
-            <div class="output">
-                <iframe id="compiler"></iframe>
+        <div class="col-lg-5 col-md-12">
+            <div class="output" style="">
+                <div class="alert alert-success" style="text-align: center;">
+                    Project: {{pName}}</span>
+                </div>
+                <div style="height: calc(100% - 80px); background-color: white">
+                    <iframe id="compiler"></iframe>
+                </div>
             </div>
         </div>
-        <div class="sideBar">
-            <div id="chatbox">
-                <span class="sideBar-btn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9783;</span>
-            </div>
-        </div>
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <div class="card text-white bg-dark mb-3" style="margin: 3px 10px;padding: 10px">
+        <div class="col-lg-3 col-md-12">
+            <div class="card text-white bg-dark mb-3" style="width: 100%;padding: 15px;">
                 Share This Url With Others to Collaborate:
                 <span class="p-url" id="pUrl"></span>
             </div>
-            <div class="card text-white bg-dark mb-3" style="margin: 10px;position: absolute;width: 95%;bottom: 0;">
+            <div class="card text-white bg-dark mb-3" style="width: 100%;">
                 {{!-- CHAT --}}
                 <div class="card-body">
                     <div class="card-title" style="padding: 10px;">
                         CHAT ROOM
-                        <span class="float-right" id="chatbox-username">
-                            {{#if user}}
-                            {{user.name}}
-                            {{/if}}
-                        </span>
+                        <span class="float-right" id="chatbox-username">{{#if user}}{{user.name}}{{/if}}</span>
                     </div>
-                    <ul class="media-list" style=" max-height: 150px;; overflow-y: scroll; padding: 5px !important;"
+                    <ul class="media-list" style="height: 280px; overflow-y: scroll; padding: 5px !important;width: 100%;"
                         id="chatbox-listMessages">
 
                     </ul>
@@ -64,8 +49,16 @@
                     </div>
                 </div>
             </div>
-
         </div>
+        {{!-- <div class="sideBar">
+            <div id="chatbox">
+                <span class="sideBar-btn" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9783;</span>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        </div> --}}
     </div>
 </div>
 
@@ -76,6 +69,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/mode/javascript/javascript.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/mode/xml/xml.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/mode/htmlmixed/htmlmixed.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/mode/css/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/addon/hint/html-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/addon/hint/css-hint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.57.0/addon/hint/javascript-hint.min.js"></script>
+
 
 <script src="/plugins/ot/ot.js"></script>
 <script src="/socket.io/socket.io.js"></script>
