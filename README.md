@@ -4,15 +4,27 @@ Code2Gether is a Platform Designed for developing web components
 that you can code in HTML/CSS/JAVASCRIPT in collaboration with friends or collegues
 and see the result in real-time and even chat with each other while working on a project. All in One Platform ! 
 
-![Alt text](/screenshots/Shot1.jpg?raw=true "Home Page")
+![Alt text](/screenshots/Shot1.jpg?raw=true "Home Page") ![Alt text](/screenshots/Shot3.jpg?raw=true "Home Page")
 
+
+## Requirements
+
+Main Requirements used in this project are mentioned below: 
+
+- Nodejs
+- Express
+- MongoDB
+- Socket.io
+- OTjs
+- PeerJs
 
 ## Installation
 
-1) First make sure u have nodejs and node package manager installed on your system,
-if you don't you can get it from link below: 
+1) First make sure u have nodejs and (node package manager) and MongoDB installed on your system,
+if you don't you can get them from links below: 
 
 > https://nodejs.org/en/download/
+> https://www.mongodb.com/try/download/community
 
 2) Clone or Download this Repository:
 
