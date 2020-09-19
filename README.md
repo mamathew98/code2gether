@@ -10,7 +10,7 @@ and see the result in real-time and even chat with each other while working on a
 ## Installation
 
 1) First make sure u have nodejs and node package manager installed on your system,
-if u don't you can get it from link below: 
+if you don't you can get it from link below: 
 
 > https://nodejs.org/en/download/
 
@@ -40,5 +40,5 @@ npm start
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
-
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

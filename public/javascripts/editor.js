@@ -146,11 +146,12 @@ socketJs.on("doc", function (obj) {
 });
 
 var username = $("#chatbox-username").text();
-console.log("user: ", username);
-if (username === "") {
-  var userId = Math.floor(Math.random() * 9999).toString();
-  username = "User" + userId;
-  $("#chatbox-username").text(username);
+var name = $("#chatbox-name").text();
+var userId = Math.floor(Math.random() * 9999).toString();
+username = "User" + userId;
+$("#chatbox-username").text(username);
+if (name === "") {
+  $("#chatbox-name").text(username);
 }
 
 var roomId = $("#roomId").val();
@@ -198,3 +199,4 @@ var sendMessage = function () {
 socket.on("chatMessage", function (data) {
   $("#chatbox-listMessages").append(userMessage(data.username, data.message));
 });
+
