@@ -166,10 +166,9 @@
     // Compatibility shim
     navigator.getUserMedia =
         navigator.mediaDevices.getUserMedia ||
-        navigator.getUserMedia ||
         navigator.webkitGetUserMedia ||
         navigator.mozGetUserMedia;
-    //PeerJS object
+    // PeerJS object
     var peer = new Peer(username + roomId, {
         host: 'localhost',
         port: 9000,
@@ -211,7 +210,6 @@
     function step1() {
         // Get audio/video stream
         var myVideo = document.querySelector("#my-video");
-
         navigator.getUserMedia({ audio: true, video: true }).then(
             function (stream) {
                 // Set your video displays
