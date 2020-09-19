@@ -47,7 +47,7 @@ npm install
 npm start
 ```
 
-5) Go to `/PeerServer` and run npm install and wait for dependecies to get installed
+5) Go to `/PeerServer` and run `npm install` and wait for dependecies to get installed
 
 ```
 cd /PeerServer
