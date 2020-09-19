@@ -69,7 +69,8 @@
 
                             <a href="#" class="btn btn-sm btn-success float-right" style="margin-left: 10px;"
                                 id="make-call">Call</a>
-                            <small class="form-text text-muted" style="margin-left: 10px;">Insert User's Id to call (Like
+                            <small class="form-text text-muted" style="margin-left: 10px;">Insert User's Id to call
+                                (Like
                                 Above)</small>
 
                         </div>
@@ -163,11 +164,12 @@
 <script>
     // PeerJS
     // Compatibility shim
-    //navigator.getUserMedia =
-    //navigator.getUserMedia ||
-    //navigator.webkitGetUserMedia ||
-    //navigator.mozGetUserMedia;
-    // PeerJS object
+    navigator.getUserMedia =
+        navigator.mediaDevices.getUserMedia ||
+        navigator.getUserMedia ||
+        navigator.webkitGetUserMedia ||
+        navigator.mozGetUserMedia;
+    //PeerJS object
     var peer = new Peer(username + roomId, {
         host: 'localhost',
         port: 9000,
@@ -210,7 +212,7 @@
         // Get audio/video stream
         var myVideo = document.querySelector("#my-video");
 
-        navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(
+        navigator.getUserMedia({ audio: true, video: true }).then(
             function (stream) {
                 // Set your video displays
                 //$("#my-video").prop("src", URL.createObjectURL(stream));

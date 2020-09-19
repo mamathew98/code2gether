@@ -2,21 +2,21 @@ var EditorClient = ot.EditorClient;
 var SocketIOAdapter = ot.SocketIOAdapter;
 var CodeMirrorAdapter = ot.CodeMirrorAdapter;
 
-// var socket = io("http://51.195.28.68:3000");
-// var socketCss = io("http://51.195.28.68:3000", {
-//   forceNew: true,
-// });
-// var socketJs = io("http://51.195.28.68:3000", {
-//   forceNew: true,
-// });
+var socket = io("http://51.195.28.68:3000");
+var socketCss = io("http://51.195.28.68:3000", {
+  forceNew: true,
+});
+var socketJs = io("http://51.195.28.68:3000", {
+  forceNew: true,
+});
 
-var socket = io("http://localhost:3000");
-var socketCss = io("http://localhost:3000", {
-  forceNew: true,
-});
-var socketJs = io("http://localhost:3000", {
-  forceNew: true,
-});
+// var socket = io("http://localhost:3000");
+// var socketCss = io("http://localhost:3000", {
+//   forceNew: true,
+// });
+// var socketJs = io("http://localhost:3000", {
+//   forceNew: true,
+// });
 
 var htmlVal;
 var cssVal;
