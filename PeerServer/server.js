@@ -7,7 +7,7 @@ var ExpressPeerServer = require('peer').ExpressPeerServer;
 
 var options = {
   debug: true,
-  key: 'code4startup'
+  key: 'code2gether'
 };
 
 var app = express();
