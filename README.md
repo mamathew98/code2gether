@@ -60,7 +60,7 @@ npm install
 npm start
 ```
 
-7) For Running on Your Local Server head to `/public/javascripts/editor.js` File and Comment the section below `//FOR SERVER DEPLOYMENT` and Uncomment the section below `// FOR LOCAL DEPLOYMENT` (if you want to run application on a server you have to change the url in socket initiation below `// FOR SERVER DEPLOYMENT` )
+7) For Running on Your Local Server head to `/public/javascripts/editor.js` File and Comment the section below `//FOR SERVER DEPLOYMENT` and Uncomment the section below `// FOR LOCAL DEPLOYMENT` (if you want to run application on a server you have to change the url in socket initiations below `// FOR SERVER DEPLOYMENT` )
 
 <p align="center" width="100%">
     <img width="80%" src="/screenshots/shot4.jpg?raw=true"> 
