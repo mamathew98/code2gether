@@ -76,8 +76,8 @@ npm start
 > if you want to run application on a server you have to change the url provided in socket initiations in section below `// FOR SERVER DEPLOYMENT`
 
 <p float="left" width="100%">
-    <img width="50%" src="/screenshots/shot4.jpg?raw=true"> 
-    <img width="50%" src="/screenshots/Shot5.jpg?raw=true">
+    <img width="45%" src="/screenshots/shot4.jpg?raw=true"> 
+    <img width="45%" src="/screenshots/Shot5.jpg?raw=true">
 </p>
 
 
