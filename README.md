@@ -54,13 +54,13 @@ cd /PeerServer
 npm install
 ```
 
-6)Make sure Your 9000 port on device is available and run `npm install` in `/PeerServer` directoy 
+6) Make sure Your 9000 port on device is available and run `npm install` in `/PeerServer` directoy 
 
 ```
 npm start
 ```
 
-7) for Running on Local Server Head to `/public/javascripts/editor.js` and Comment the `// FOR SERVER DEPLOYMENT` part and Uncomment the `// FOR LOCAL DEPLOYMENT` part
+7) For Running on Your Local Server head to `/public/javascripts/editor.js` directory and Comment the section below `//FOR SERVER DEPLOYMENT` and Uncomment the section below `// FOR LOCAL DEPLOYMENT`
 
 8) Open a Browser and go to `http://localhost:3000/`
 
