@@ -4,7 +4,7 @@ Code2Gether is a Platform Designed for developing web components
 that you can code in HTML/CSS/JAVASCRIPT in collaboration with friends or collegues
 and see the result in real-time and even chat with each other while working on a project. All in One Platform ! 
 
-![Alt text](/screenshots/Shot1.jpg?raw=true "Home Page") ![Alt text](/screenshots/Shot3.jpg?raw=true "Home Page")
+![Alt text](/screenshots/Shot1.jpg?raw=true "Home Page") ![Alt text](/screenshots/Shot3.jpg?raw=true "Editor Page")
 
 
 ## Requirements
@@ -61,6 +61,8 @@ npm start
 ```
 
 7) For Running on Your Local Server head to `/public/javascripts/editor.js` File and Comment the section below `//FOR SERVER DEPLOYMENT` and Uncomment the section below `// FOR LOCAL DEPLOYMENT`
+
+![Alt text](/screenshots/Shot3.jpg?raw=true "Editor Config")
 
 8) Open a Browser and go to `http://localhost:3000/`
 
