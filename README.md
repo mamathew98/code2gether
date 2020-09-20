@@ -60,9 +60,11 @@ npm install
 npm start
 ```
 
-7) Open a Browser and go to `http://localhost:3000/`
+7) for Running on Local Server Head to `/public/javascripts/editor.js` and Comment the `// FOR SERVER DEPLOYMENT` part and Uncomment the `// FOR LOCAL DEPLOYMENT` part
 
-8) Vola! Now you can register and make a project and share its link with others so you can collaborate on the project together
+8) Open a Browser and go to `http://localhost:3000/`
+
+9) Vola! Now you can register and make a project and share its link with others so you can collaborate on the project together
 
 
 
