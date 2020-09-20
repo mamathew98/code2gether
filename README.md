@@ -30,33 +30,33 @@ if you don't you can get them from links below:
 
 2) Clone or Download this Repository:
 
-```
+```bash
 git clone https://github.com/mamathew98/code2gether.git
 ```
 
 3) Open a Terminal and head to root directory of the project and run `npm install` and wait for the dependecies to get installed: 
 
-```
+```bash
 cd code2gether
 npm install
 ```
 
 4) Make sure Your 3000 port on device is available and run: 
 
-```
+```bash
 npm start
 ```
 
 5) Open another Terminal and head to `/PeerServer` and run `npm install` and wait for dependecies to get installed
 
-```
+```bash
 cd /PeerServer
 npm install
 ```
 
 6) Make sure Your 9000 port on device is available and run `npm start` in `/PeerServer` directoy 
 
-```
+```bash
 npm start
 ```
 
