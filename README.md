@@ -41,7 +41,7 @@ git clone https://github.com/mamathew98/code2gether.git
 3) Open a Terminal and head to root directory of the project and run `npm install` and wait for the dependecies to get installed: 
 
 ```bash
-cd code2gether
+cd /code2gether
 npm install
 ```
 
