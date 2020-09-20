@@ -77,7 +77,7 @@ npm start
 
 <p float="left" width="100%">
     <img width="45%" src="/screenshots/shot4.jpg?raw=true"> 
-    <img width="45%" src="/screenshots/Shot5.jpg?raw=true">
+    <img width="46%" src="/screenshots/Shot5.jpg?raw=true">
 </p>
 
 
