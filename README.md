@@ -63,7 +63,7 @@ npm start
 7) For Running on Your Local Server head to `/public/javascripts/editor.js` File and Comment the section below `//FOR SERVER DEPLOYMENT` and Uncomment the section below `// FOR LOCAL DEPLOYMENT`
 
 <p align="center" width="100%">
-    <img width="100%" src="/screenshots/shot4.jpg?raw=true"> 
+    <img width="80%" src="/screenshots/shot4.jpg?raw=true"> 
 </p>
 
 8) Open a Browser and go to `http://localhost:3000/`
