@@ -34,7 +34,7 @@ if you don't you can get them from links below:
 git clone https://github.com/mamathew98/code2gether.git
 ```
 
-3) Go in root directory of the project and run `npm install` and wait for the dependecies to get installed: 
+3) Open a Terminal and head to root directory of the project and run `npm install` and wait for the dependecies to get installed: 
 
 ```
 cd code2gether
@@ -47,7 +47,7 @@ npm install
 npm start
 ```
 
-5) Go to `/PeerServer` and run `npm install` and wait for dependecies to get installed
+5) Open another Terminal and head to `/PeerServer` and run `npm install` and wait for dependecies to get installed
 
 ```
 cd /PeerServer
@@ -60,8 +60,8 @@ npm install
 npm start
 ```
 
-7) For Running on Your Local Server head to `/public/javascripts/editor.js` File and Comment the section below `//FOR SERVER DEPLOYMENT` and Uncomment the section below `// FOR LOCAL DEPLOYMENT` 
-> if you want to run application on a server you have to change the url in socket initiations below `// FOR SERVER DEPLOYMENT`
+7) For Running on Your Local Server head to `/public/javascripts/` and open `editor.js` File then Comment the section below `//FOR SERVER DEPLOYMENT` and Uncomment the section below `// FOR LOCAL DEPLOYMENT` 
+> if you want to run application on a server you have to change the url provided in socket initiations in section below `// FOR SERVER DEPLOYMENT`
 
 <p align="center" width="100%">
     <img width="80%" src="/screenshots/shot4.jpg?raw=true"> 
