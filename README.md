@@ -75,7 +75,7 @@ npm start
 7) For Running on Your Local Server head to `/public/javascripts/` and open `editor.js` File then Comment the section below `//FOR SERVER DEPLOYMENT` and Uncomment the section below `// FOR LOCAL DEPLOYMENT` 
 > if you want to run application on a server you have to change the url provided in socket initiations in section below `// FOR SERVER DEPLOYMENT`
 
-<p align="left" width="100%">
+<p float="left" width="100%">
     <img width="50%" src="/screenshots/shot4.jpg?raw=true"> 
     <img width="50%" src="/screenshots/Shot5.jpg?raw=true">
 </p>
