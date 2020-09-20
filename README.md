@@ -54,7 +54,7 @@ cd /PeerServer
 npm install
 ```
 
-6) Make sure Your 9000 port on device is available and run `npm install` in `/PeerServer` directoy 
+6) Make sure Your 9000 port on device is available and run `npm start` in `/PeerServer` directoy 
 
 ```
 npm start
