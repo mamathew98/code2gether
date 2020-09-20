@@ -20,7 +20,7 @@ Main Requirements used in this project are mentioned below:
 
 ## Installation
 
-1) First make sure u have nodejs and (node package manager) and MongoDB installed on your system,
+1) First make sure u have nodejs (and node package manager) and MongoDB installed on your system,
 if you don't you can get them from links below: 
 
 - Nodejs
