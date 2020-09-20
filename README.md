@@ -60,7 +60,7 @@ npm install
 npm start
 ```
 
-7) For Running on Your Local Server head to `/public/javascripts/editor.js` directory and Comment the section below `//FOR SERVER DEPLOYMENT` and Uncomment the section below `// FOR LOCAL DEPLOYMENT`
+7) For Running on Your Local Server head to `/public/javascripts/editor.js` File and Comment the section below `//FOR SERVER DEPLOYMENT` and Uncomment the section below `// FOR LOCAL DEPLOYMENT`
 
 8) Open a Browser and go to `http://localhost:3000/`
 
