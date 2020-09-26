@@ -38,7 +38,6 @@ editor.on("change", function (cm, change) {
   compile();
 });
 
-
 // css editor value
 var cssVal;
 
@@ -59,7 +58,6 @@ editorCss.on("change", function (cm, change) {
   cssVal = cm.getValue();
   compile();
 });
-
 
 // js editor value
 var jsVal;
@@ -89,8 +87,6 @@ function compile() {
   var js = jsVal;
   // get iframe element
   var compiler = document.getElementsByTagName("iframe")[0];
-
-  // compiler.open();
   const source = `
   <html>
     <head><style>${css}</style></head>
@@ -100,13 +96,7 @@ function compile() {
     </body>
   </html>
 `;
-  // writeIn is deprecated so it was changed to element.srcdoc
-
-  // compiler.writeln(
-  //   html + "<style>" + css + "</style>" + "<script>" + js + "</script>"
-  // );
   compiler.srcdoc = source;
-  // compiler.close();
 }
 
 // code editor values for sharing into otjs
@@ -119,16 +109,23 @@ var cmClient;
 var cmClientCss;
 var cmClientJs;
 
-// init html editor with data fetched from database
+// init html editor with data fetched from database and connect it to otjs
 function init(str, revision, clients, serverAdapter) {
+  // if editor is empty
   if (!code) {
+    // set default value to editor
     editor.setValue(str);
   }
 
+  // create a ot client for editor
   cmClient = new EditorClient(
+    // document revisions
     revision,
+    // other users(sockets) wolrking on this project
     clients,
+    // ot server provided with socket connection
     serverAdapter,
+    // adapt code mirror with ot
     new CodeMirrorAdapter(editor)
   );
 }
@@ -197,7 +194,7 @@ socket.emit("joinRoom", {
   editor: "html",
 });
 
-// connect htlm socket to room
+// connect css socket to room
 socketCss.emit("joinRoom", {
   room: roomId + "css",
   docId: roomId,
@@ -205,7 +202,7 @@ socketCss.emit("joinRoom", {
   editor: "css",
 });
 
-// connect htlm socket to room
+// connect js socket to room
 socketJs.emit("joinRoom", {
   room: roomId + "js",
   docId: roomId,
@@ -232,13 +229,15 @@ var userMessage = function (name, text) {
 
 // send user message through socket
 var sendMessage = function () {
+  // get user input in message area
   var userMessage = $("#userMessage").val();
+  // emit the message in socket via "chatMessage" event
   socket.emit("chatMessage", { message: userMessage, username: username });
   $("#userMessage").val("");
 };
 
 // get other users message on this event
 socket.on("chatMessage", function (data) {
+  // load the given message in chatbox area
   $("#chatbox-listMessages").append(userMessage(data.username, data.message));
 });
-

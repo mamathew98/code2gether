@@ -20,6 +20,8 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
+
+// connect socket-server to app-server
 require('../socket-server')(server);
 
 /**

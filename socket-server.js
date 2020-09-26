@@ -12,18 +12,28 @@ module.exports = function (server) {
   var io = socketIO(server);
   io.on("connection", function (socket) {
     socket.on("joinRoom", function (data) {
+      // check if socket-room exists
       if (!roomList[data.room]) {
+        // check the type of connection if it is from html editor
         if(data.editor === 'html') {
           console.log('html');
+          // create an exclusive socketServer fot the editor that is connected
           var socketIOServer = new ot.EditorSocketIOServer(
+            // the document which editor is using
             html,
+            // editor operations
             [],
+            // document id 
             data.room,
+            // what happens when user writes in document
             function (socket, cb) {
               var self = this; 
+              // find the project by its document id and update it's data
               Project.findByIdAndUpdate(
                 data.docId,
+                // update html part of project 
                 { html: self.document },
+                // check if there's any error
                 function (err) {
                   if (err) return cb(false);
                   cb(true);
